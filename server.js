@@ -15,11 +15,11 @@ app.use(cors());
 const config = {
    client: "pg",
    connection: {
-      host: "127.0.0.1",
+      host: process.env.DATABASE_HOST,
       port: 5432,
-      user: "bktpp",
-      password: "@Unlockme2025",
-      database: "smart-brain",
+      user: process.env.DATABASE_USER,
+      password: process.env.DATABASE_PW,
+      database: process.env.DATABASE_DB,
    },
 };
 
